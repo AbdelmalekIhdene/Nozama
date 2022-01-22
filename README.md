@@ -3,10 +3,10 @@ An Amazon-inspired e-commerce platform powered by React, MaterialUI and Firebase
 ## Getting Started
 1. Install NodeJS from https://nodejs.org/en/download/ using the (.msi) installer and restart your computer if needed.
 2. Test your installation with the following commands:
-        
+
         node -v
         npm -v
-        
+
 
 3. In the command prompt, `cd` to your working directory, `git clone` the repository (if you don't have the GIT command-line tool installed, you can install it from https://git-scm.com/download/win) and then `cd` into the repository, e.g.
 
@@ -19,5 +19,6 @@ An Amazon-inspired e-commerce platform powered by React, MaterialUI and Firebase
 
 Jeff Zhang (40166082) JeffZhang852
 Eve Gagnon (40063888) evgnon
+Alexandra Zana (40131077) Alexicazana
 Armita Zand (40158239) Armita471
 Ru Hong (40068183) JosephHong3145
