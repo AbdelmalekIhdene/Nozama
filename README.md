@@ -23,3 +23,4 @@ Alexandra Zana (40131077) Alexicazana
 Armita Zand (40158239) Armita471
 Ru Hong (40068183) JosephHong3145
 Ayman Mansoor (40108719) gigihuda#2207
+Ali Alp Erdinc (40172910) AlpErdinc
