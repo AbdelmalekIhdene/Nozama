@@ -16,3 +16,5 @@ An Amazon-inspired e-commerce platform powered by React, MaterialUI and Firebase
 
 4. In the working directory, initially run `npm install` to install all of the dependencies, you should now have a `node_modules` folder.
 5. Finally, run `npm start` to start the app in development mode and open http://localhost:3000 in your browser to view it.
+
+Jeff Zhang (40166082) JeffZhang852
