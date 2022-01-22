@@ -19,4 +19,5 @@ An Amazon-inspired e-commerce platform powered by React, MaterialUI and Firebase
 
 Jeff Zhang (40166082) JeffZhang852
 Eve Gagnon (40063888) evgnon
-Armita Zand (40158239 Armita471
+Armita Zand (40158239) Armita471
+Ru Hong (40068183) JosephHong3145
