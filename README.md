@@ -1,6 +1,6 @@
-# Shopalot
+# Shopalot 
 ## Description
-An Amazon-inspired e-commerce platform created for Concordia's SOEN341 class and powered by React, MaterialUI and Firebase 
+An Amazon-inspired e-commerce platform created for Concordia's SOEN341 class and powered by React, MaterialUI and Firebase (Feature #8)
 ## Core Features
 - Users should be able to either be customers or vendors
 - Vendors should be able to publish their product on the platform and specify categories, prices, pictures and names for them
