@@ -1,6 +1,7 @@
-import { AccountCircle } from "@mui/icons-material";
+import { AccountCircle, ShoppingBasketRounded } from "@mui/icons-material";
 import {
   AppBar,
+  Button,
   IconButton,
   InputBase,
   Menu,
@@ -12,9 +13,10 @@ import {
 } from "@mui/material";
 import BlurOnIcon from "@mui/icons-material/BlurOn";
 import Box from "@mui/material/Box";
+import ListItemIcon from "@mui/material/ListItemIcon";
+import Logout from "@mui/icons-material/Logout";
 import React from "react";
 import SearchIcon from "@mui/icons-material/Search";
-// import { ShoppingBasketRounded } from "@mui/icons-material";
 
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
@@ -27,8 +29,8 @@ const Search = styled("div")(({ theme }) => ({
   marginLeft: 0,
   width: "100%",
   [theme.breakpoints.up("sm")]: {
-    marginLeft: theme.spacing(3),
-    width: "80%",
+    marginLeft: theme.spacing(8),
+    width: "50%",
   },
 }));
 
@@ -51,7 +53,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
     transition: theme.transitions.create("width"),
     width: "100%",
     [theme.breakpoints.up("md")]: {
-      width: "20ch",
+      width: "40ch",
     },
   },
 }));
@@ -83,12 +85,29 @@ export default function OverallNavBar() {
       open={isMenuOpen}
       onClose={handleMenuClose}
     >
-      <MenuItem onClick={handleMenuClose}>MyOrders</MenuItem>
-      <MenuItem onClick={handleMenuClose}>MyCart</MenuItem>
       <MenuItem onClick={handleMenuClose}>MyProfile</MenuItem>
-      <MenuItem onClick={handleMenuClose}>SignOut</MenuItem>
+      <MenuItem onClick={handleMenuClose}>MyOrders</MenuItem>
+      <MenuItem onClick={handleMenuClose}>
+        {" "}
+        <ListItemIcon>
+          {" "}
+          <Logout /> Sign Out
+        </ListItemIcon>
+      </MenuItem>
     </Menu>
   );
+
+  /* <Link to={!user && "/login"}>
+      <div onClick={handleAuthentication} className="header-option">
+            <span className="header-optionLineOne">
+              Hello {!user ? "Guest" : user.email}
+            </span>
+        <span className="header-optionLineTwo">
+              {user ? "Sign Out" : "Sign In"}
+            </span>
+      </div>
+    </Link>
+  */
 
   return (
     <Box sx={{ flexGrow: 1 }}>
@@ -98,7 +117,7 @@ export default function OverallNavBar() {
             size="large"
             edge="start"
             color={"inherit"}
-            aria-label="open drawer"
+            aria-label="blur circle"
             sx={{ mr: 2 }}
           >
             <BlurOnIcon />
@@ -122,6 +141,13 @@ export default function OverallNavBar() {
           </Search>
           <Box sx={{ flexGrow: 1 }} />
           <Box sx={{ display: { xs: "none", md: "flex" } }}>
+            <IconButton
+              onClick={handleMenuClose} // should be handle mycart later
+              color="inherit"
+            >
+              <ShoppingBasketRounded />
+              <Typography>MyCart</Typography>
+            </IconButton>
             <IconButton
               size="large"
               edge="end"
