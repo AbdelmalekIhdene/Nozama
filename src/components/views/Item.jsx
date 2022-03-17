@@ -27,7 +27,6 @@ export default function Item(props) {
         <Typography variant="body2" color="text.secondary">
           {props.price}
         </Typography>
-        <Button size="small">Add to Cart</Button>
       </CardActions>
     </Card>
   );
