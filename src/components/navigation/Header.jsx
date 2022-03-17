@@ -11,12 +11,14 @@ import {
   alpha,
   styled,
 } from "@mui/material";
+import Autocomplete from "@mui/material/Autocomplete";
 import BlurOnIcon from "@mui/icons-material/BlurOn";
 import Box from "@mui/material/Box";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import Logout from "@mui/icons-material/Logout";
 import React from "react";
 import SearchIcon from "@mui/icons-material/Search";
+import TextField from "@mui/material/TextField";
 
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
@@ -87,6 +89,7 @@ export default function OverallNavBar() {
     >
       <MenuItem onClick={handleMenuClose}>MyProfile</MenuItem>
       <MenuItem onClick={handleMenuClose}>MyOrders</MenuItem>
+      <MenuItem onClick={handleMenuClose}>SignUp</MenuItem>
       <MenuItem onClick={handleMenuClose}>
         {" "}
         <ListItemIcon>
@@ -96,7 +99,7 @@ export default function OverallNavBar() {
       </MenuItem>
     </Menu>
   );
-
+  // redirect onClick to MyProfile, etc...???????
   /* <Link to={!user && "/login"}>
       <div onClick={handleAuthentication} className="header-option">
             <span className="header-optionLineOne">
@@ -115,7 +118,7 @@ export default function OverallNavBar() {
         <Toolbar>
           <IconButton
             size="large"
-            edge="start"
+            edge="end"
             color={"inherit"}
             aria-label="blur circle"
             sx={{ mr: 2 }}
@@ -134,8 +137,13 @@ export default function OverallNavBar() {
             <SearchIconWrapper>
               <SearchIcon />
             </SearchIconWrapper>
-            <StyledInputBase
-              placeholder="Search here..."
+            <Autocomplete
+              disablePortal
+              id="combo-box"
+              options={allProducts}
+              renderInput={(params) => <TextField {...params} />}
+              // placeholder="Search here..."
+              // onClick={() => alert("You searched")}
               inputProps={{ "aria-label": "search" }}
             />
           </Search>
@@ -166,3 +174,14 @@ export default function OverallNavBar() {
     </Box>
   );
 }
+const allProducts = [
+  { label: "Adidas Grand Court Sneakers" },
+  { label: "Samsung TV" },
+  { label: "Macbook Air" },
+  { label: "Elastic Headbands" },
+  { label: "Kids Toys" },
+  { label: "Christmas Decorations" },
+  { label: "Champion Hoodie" },
+  { label: "Cat Toys" },
+  { label: "Baby Yoda" },
+];
